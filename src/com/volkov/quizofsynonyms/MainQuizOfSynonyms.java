@@ -34,7 +34,7 @@ public class MainQuizOfSynonyms {
 
     }
 
-    private static LinkedList<LinkedList<String>> readQuizFromFile() throws FileNotFoundException, NullPointerException {
+    private static LinkedList<LinkedList<String>> readQuizFromFile() throws FileNotFoundException{
         //Read from dictionary.txt
         //Implement "Reservoir sampling" for choosing questions
         LinkedList<LinkedList<String>> result = new LinkedList<>();
