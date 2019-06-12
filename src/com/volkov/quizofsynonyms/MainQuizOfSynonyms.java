@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class MainQuizOfSynonyms {
+    private static final int NUMBER_OF_QUESTIONS = 5;
 
     public static void main(String[] args) {
         //Structure: List of questions.
@@ -34,15 +35,14 @@ public class MainQuizOfSynonyms {
 
     }
 
-    private static LinkedList<LinkedList<String>> readQuizFromFile() throws FileNotFoundException{
+    private static LinkedList<LinkedList<String>> readQuizFromFile() throws FileNotFoundException {
         //Read from dictionary.txt
         //Implement "Reservoir sampling" for choosing questions
         LinkedList<LinkedList<String>> result = new LinkedList<>();
         String temp;
         String tempResult = null;
         Random random = new Random();
-        //The number of questions is hardcoded for now
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= NUMBER_OF_QUESTIONS; i++) {
             int limitOfRandom = 0;
             for (Scanner scanner = new Scanner(new File("dictionary.txt")); scanner.hasNext(); ) {
                 ++limitOfRandom;
